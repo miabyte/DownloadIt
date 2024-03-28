@@ -9,9 +9,12 @@ Once DownloadIt is running, just paste the URL of the YouTube video you want to 
 
 DownloadIt offers a hassle-free solution for downloading YouTube content without the need for complex software or plugins. Whether you're downloading videos for offline viewing or converting them to audio files, DownloadIt has you covered.
 
-![](https://i.imgur.com/T1lbrTe.gif)
+![](https://i.imgur.com/xn3owaL.gif)
 
-You can directly download the exe and use it, its a portable tool. You can check the code from Downloadit.py file as well. 🌿🙋‍♀️
+You can directly download the exe and use it, its a portable tool. You can check the code from Downloadit.py file as well. 🌿
+# Note : 
+Although some antivirus programs may flag Downloadit as potentially harmful due to its unrecognized publisher, it's safe for use.
+To address any concerns, you can review and utilize the source code directly. Visit [[link](https://github.com/miabyte/DownloadIt/blob/main/downloadit.py)] to access it. Note: Running the code in Python requires Python, tkinter, customtkinter, and pytube.🙋‍♀️
 
 
 Made with 💖 and ☕ by MiaByte.
