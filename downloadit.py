@@ -25,14 +25,14 @@ def startVideoDownload():
         ytObject = YouTube(ytLink, on_progress_callback=on_progress)
         video = ytObject.streams.get_highest_resolution()
         title_text = ytObject.title
-        title.configure(text=title_text, text_color="white")
+        title.configure(text=title_text)
         finishLabel.configure(text="")
         video_file_path = os.path.join(get_downloads_folder(), title_text + '.mp4')
         video.download(filename=video_file_path)
-        finishLabel.configure(text="Downloaded!", text_color="white")
+        finishLabel.configure(text="Downloaded!")
     except Exception as e:
         print(e)
-        finishLabel.configure(text="Download Error", text_color="red")
+        finishLabel.configure(text="Download Error")
 
 def startAudioDownload():
     try:
@@ -41,20 +41,18 @@ def startAudioDownload():
         ytObject = YouTube(ytLink)
         audio = ytObject.streams.filter(only_audio=True).first()
         title_text = ytObject.title
-        title.configure(text=title_text, text_color="white")
+        title.configure(text=title_text)
         finishLabel.configure(text="")
         audio_file_path = os.path.join(get_downloads_folder(), title_text + '_Audio.mp4')
         out_file = audio.download(filename=audio_file_path)
-        finishLabel.configure(text="Audio Downloaded!", text_color="white")
-        # save the file 
+        finishLabel.configure(text="Audio Downloaded!")
+        # save the file as mp3 
         base, ext = os.path.splitext(out_file) 
         new_file = base + '.mp3'
         os.rename(out_file, new_file) 
     except Exception as e:
         print(e)
-        finishLabel.configure(text="Audio Download Error", text_color="red")
-
-
+        finishLabel.configure(text="Audio Download Error")
 
 def on_progress(stream, chunk, bytes_remaining):
     total_size = stream.filesize
@@ -103,5 +101,4 @@ audioDownload = customtkinter.CTkButton(app, text="Download Audio (MP3)", comman
 audioDownload.pack(padx=10, pady=5)
 
 # Run app
-app.iconbitmap("D:\Program\Code\DownloadIt\downloadit.ico") 
 app.mainloop()
