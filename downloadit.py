@@ -2,9 +2,6 @@ import tkinter
 import customtkinter
 from pytube import YouTube
 import os
-from moviepy.audio.io.AudioFileClip import AudioFileClip
-
-
 
 # Function to get the path to the "Downloads" folder
 def get_downloads_folder():
